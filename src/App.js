@@ -1,5 +1,6 @@
 import { useState,useEffect } from 'react';
 import './App.css';
+const API_KEY = process.env.REACT_APP_API_KEY
 
 function App() {
   const [text, setText] = useState([]);
@@ -10,7 +11,7 @@ function App() {
     const options = {
       method: 'GET',
       headers: {
-        'X-RapidAPI-Key': 'MyKey',
+        'X-RapidAPI-Key': API_KEY,
         'X-RapidAPI-Host': 'adsbx-flight-sim-traffic.p.rapidapi.com'
       }
     };
